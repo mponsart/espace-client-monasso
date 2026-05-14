@@ -9,16 +9,21 @@
     <style>body{font-family:'Titillium Web',sans-serif;}</style>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
-    <header class="bg-white shadow p-4 flex items-center justify-between">
-        <span class="text-xl font-bold text-indigo-700">MonAsso Admin</span>
-        <nav>
-            <a href="/admin" class="text-indigo-600 hover:underline mx-2">Utilisateurs</a>
-            <a href="/logout" class="text-indigo-600 hover:underline mx-2">Déconnexion</a>
-        </nav>
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                <span class="text-2xl font-extrabold text-indigo-700 tracking-tight">MonAsso Admin</span>
+            </div>
+            <nav class="space-x-4">
+                <a href="/admin" class="text-indigo-600 hover:text-indigo-800 font-medium">Utilisateurs</a>
+                <a href="/logout" class="text-indigo-600 hover:text-indigo-800 font-medium">Déconnexion</a>
+            </nav>
+        </div>
     </header>
-    <main class="flex-1 max-w-5xl mx-auto py-8 w-full">
-        <h1 class="text-3xl font-bold mb-6">Administration des utilisateurs</h1>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <main class="flex-1 max-w-5xl mx-auto py-12 w-full px-4">
+        <h1 class="text-4xl font-extrabold mb-8 text-center">Administration des utilisateurs</h1>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>
@@ -54,6 +59,10 @@
             </table>
         </div>
     </main>
-    <footer class="bg-white text-center text-gray-400 text-sm p-4">&copy; 2026 MonAsso. Tous droits réservés.</footer>
+    <footer class="bg-white border-t mt-8">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-400 text-sm">
+            &copy; 2026 MonAsso. Tous droits réservés.
+        </div>
+    </footer>
 </body>
 </html>
