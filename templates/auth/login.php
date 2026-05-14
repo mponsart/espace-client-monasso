@@ -27,19 +27,19 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V5a4 4 0 00-8 0v2a4 4 0 008 0z" /></svg>
             </div>
             <h1 class="text-2xl font-bold mb-6 text-indigo-700">Connexion</h1>
-            <form method="post" action="/login">
+            <form method="post" action="/login" class="space-y-6">
                 <input type="hidden" name="_token" value="<?= htmlspecialchars($_SESSION['_token'] ?? '') ?>">
-                <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Email</label>
-                    <input type="email" name="email" class="w-full border rounded px-3 py-2" required autofocus>
+                <div>
+                    <label class="block text-gray-700 mb-2 font-semibold" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" required autofocus>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 mb-2">Mot de passe</label>
-                    <input type="password" name="password" class="w-full border rounded px-3 py-2" required>
+                <div>
+                    <label class="block text-gray-700 mb-2 font-semibold" for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded font-semibold hover:bg-indigo-700 transition">Se connecter</button>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-indigo-700 transition">Se connecter</button>
             </form>
-            <div class="mt-4 text-center text-sm">
+            <div class="mt-6 text-center text-sm">
                 <a href="/register" class="text-indigo-600 hover:underline">Créer un compte</a>
             </div>
         </div>
